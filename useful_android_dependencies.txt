@@ -50,6 +50,22 @@
 	// Shimmer
 	implementation 'com.facebook.shimmer:shimmer:0.5.0'
 	
+
+add a global dependency:
+
+# add this to project build.gradle
+    ext {
+        coroutineVersion = "1.3.5"
+
+        commonDependencies = [
+                coroutine : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutineVersion}"
+        ]
+    }
+	
+# and then add this to app or module build.gradle
+
+    implementation commonDependencies.coroutine
+
 	
 
 	
